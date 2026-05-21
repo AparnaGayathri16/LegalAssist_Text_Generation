@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis/redis-stack:latest
+    container_name: redis-server
+    restart: unless-stopped
+    volumes:
+      - /home/aparna/redis:/data
+    ports:
+      - '6379:6379'
